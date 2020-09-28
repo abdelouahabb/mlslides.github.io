@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Machine learning</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+
+			<div class="slides" >
+
+				<section data-background="./img/brain.png">
+					
+					<section>
+						<h1>Machine Learning</h1>
+						<h5>Quand la machine apprend toute seule !</h5>
+					</section>
+
+					<section>
+						<img src="./img/dumb.jpg">
+					</section>
+
+					<section>
+						<h2>Définition</h2>
+						<blockquote class="fragment">
+							<p>
+								&ldquo;A computer program is said to learn
+								<span class="fragment">from <span class="fragment highlight-red">experience E</span></span> 
+								<span class="fragment"> with respect to some <span class="fragment highlight-green">class of tasks T </span></span> 
+								<span class="fragment">and <span class="fragment highlight-blue">performance measure P</span>, </span>
+								<span class="fragment">if its performance at tasks in <span class="fragment highlight-green">T</span>, </span>
+								<span class="fragment">as measured by <span class="fragment highlight-blue">P</span>, </span>
+								<span class="fragment"> improves with experience <span class="fragment highlight-red">E</span>.
+								&rdquo;</span>
+								<h5 class="fragment" style="text-align: right">- Tom Mitchell (1997)</h5>
+							</p>
+						</blockquote>
+						<p class=fragment style="font-size: .5em">
+						<span><span style="color:#ff2c2d">E: </span>Données</span>
+						<span class="fragment"><span style="color:#17ff2e">T: </span>Quelles Décisions du programme</span>
+						<span class="fragment"><span style="color:#1b91ff">P: </span>Comment évaluer le résultat</span>
+						</p>
+					</section>
+
+					<section data-background="./img/inbox.png">
+						<h3>Exemple : email</h3>
+						<p class=fragment>T : Classer les email SPAM / PAS SPAM</p>
+						<p class=fragment>E : Rajouter des données au système en aidant à le corriger en Cliquant sur Ceci est SPAM / PAS SPAM dans la boite</p>
+						<p class=fragment>P : Les emails ont été bien classés</p>
+					</section>
+
+				</section>
+
+				<section data-background="./img/cover.png">
+					
+					<section>
+						<h3>3 Types de machine learning</h3>
+						<ol>
+							<li class="fragment">Supervised Learning</li>
+							<li class="fragment">Unsupervised Learning</li>
+							<li class="fragment">Reinforcement Learning</li>
+						</ol>
+					</section>
+
+					<section>
+						<h1>Supervised Learning</h1>
+					</section>
+
+					<section>
+						<img src="./img/book.png" width=100%>
+					</section>
+
+					<section>
+						<h1>Unsupervised Learning</h1>
+					</section>
+
+					<section>
+						<img src="./img/beethoven.jpg" width=100%>
+					</section>
+
+					<section>
+						<img src="./img/jungle.jpg" width=100%>
+					</section>
+
+					<section>
+						<img src="./img/yaqadhan.jpg" width=50%>
+					</section>
+
+					<section>
+						<h1>Reinforcement Learning</h1>
+					</section>
+
+					<section>
+						<img src="./img/9.jpg" width=80%>
+					</section>
+
+					<section>
+						<img src="./img/irobot.jpg" width=80%>
+					</section>
+
+					<section>
+						<img src="./img/10.jpg" width=80%>
+					</section>
+
+				</section>
+
+				<section data-background="./img/math.jpg">
+
+					<section>
+						<h1>Un peu de maths</h1>
+					</section>
+
+					<section>
+						<img src="./img/guess.jpg" alt="">
+					</section>
+
+					<section>
+						<img src="./img/fx.png" alt="">
+						<p class="fragment">Tout le travail pour  <code class="fragment highlight-red">f'</code> et <code class="fragment highlight-red">b</code> dans</p>
+						<img src="./img/fxprime.png" class="fragment">
+					</section>
+
+				</section>
+
+				<section data-background="./img/dinars.png">
+					<section>
+						<p>
+							<span class="fragment">Prix, </span>
+							<span class="fragment">Endroit, </span>
+							<span class="fragment">Étage, </span>
+							<span class="fragment">Qualité, </span>
+							<span class="fragment">Ville, </span>
+							<span class="fragment">???</span>
+						</p>
+						<img src="./img/q3.jpg" alt="" width="50%">
+					</section>
+					
+					<section>
+						<img src="./img/faz1.png" alt="">
+					</section>
+
+					<section>
+						<img src="./img/faz2.png" width=70%>
+						<p class="fragment">Ceci est ce qui s'appelle Linear Regression</p>
+					</section>
+				
+				</section>
+
+				<section data-background="./img/kakashi.png">
+
+					<section>
+						<h2>Algorithmes des SL<sup>(*)</sup></h2>
+						<p><sup>(*)</sup>Le <span style="color:#17ff2e" class=fragment>T</span> de la définition</p>
+						<p class=fragment>
+							Deux grandes familles :
+						</p>
+						<ol>
+							<li class="fragment">Regression (tout ce qui concerne les chiffres)</li>
+							<li class="fragment">Classification (chat, chien, recommandation)</li>
+						</ol>
+					</section>
+
+					<section>
+						<img src="./img/ml_algorithms.jpg" alt="">
+						<code style="font-size: .4em">https://hackbrightacademy.com/blog/pycon-2014-melanie-warrick-machine-learning-talk/</code>
+					</section>
+
+					<section>
+						<h1>Linear Regression</h1>
+					</section>
+
+					<section>
+						<img src="./img/regression.png" width="80%">
+					</section>
+
+					<section>
+						<h1>KNN</h1>
+						<p>k Near Neighbours</p>
+					</section>
+
+					<section>
+						<img src="./img/knn1.png" width="50%">
+						<code style="font-size: .5em">http://www.kdnuggets.com/2016/01/implementing-your-own-knn-using-python.html</code>	
+					</section>
+
+					<section>
+						<img src="./img/knn2.png" width="50%">
+						<code style="font-size: .5em">http://www.kdnuggets.com/2016/01/implementing-your-own-knn-using-python.html</code>	
+					</section>
+
+					<section>
+						<img src="./img/knn3.png" width="50%">
+						<code style="font-size: .5em">http://www.kdnuggets.com/2016/01/implementing-your-own-knn-using-python.html</code>	
+					</section>
+
+					<section>
+						<img src="./img/knn4.png" width="50%">
+						<code style="font-size: .5em">http://www.kdnuggets.com/2016/01/implementing-your-own-knn-using-python.html</code>	
+					</section>
+
+					<section>
+						<h1>SVM</h1>
+						<p>Support Vector Machine</p>
+						<code style="font-size: .5em">http://www.kdnuggets.com/2016/07/support-vector-machines-simple-explanation.html</code>
+					</section>
+
+					<section>
+						<p>Marche pour la regression/classification</p>
+						<p class=fragment>Kernel en deux types : Linéaire et Non-Linéaire</p>
+						<img src="./img/svm.png" width="80%" class=fragment>
+						<p class=fragment>Maximiser le margin des Support Vector</p>
+					</section>
+
+					<section>
+						<p>Bascule vers 3D pour plus de précision</p>
+						<img src="./img/3Dsvm.png" width="80%" class=fragment>
+					</section>
+
+				</section>
+
+				<section data-background="./img/bigdata.png">
+
+					<section>
+						<h2>Les données ?<sup>(*)</sup></h2>
+						<p><sup>(*)</sup>Le <span style="color:#ff2c2d" class=fragment>E</span> de la définition</p>
+					</section>
+
+					<section>
+						<img src="./img/messy.jpeg" width="100%">
+					</section>
+
+					<section>
+						<h4 style="color: red" class=fragment>IL FAUT TOUJOURS ORGANISER SES DONNÉES</h4>
+						<img src="./img/satif.png" width="100%">
+					</section>
+
+					<section data-background="./img/mn.png">
+						<p>Quelques règles :</p>
+						<ul>
+							<li class="fragment">Utiliser un expert-1 : Domaine d'études pour savoir quoi traiter; par exemple: Expert foncier, Linguist...</li>
+							<li class="fragment">Utiliser un expert-2 : Stats/Algébre pour savoir comment traiter.</li>
+							<li class="fragment">Normaliser les données: changer l'échelle de certaines valeur pour tout mettre entre 0 et 1.</li>
+							<li class="fragment">Remplir les vides: il ne faut jamais laisser des valeurs vides ou éronées.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Il faut toujours diviser ses données en deux parties</h1>
+					</section>
+					<section>
+						<ol>
+							<li class="fragment">Celles pour <em>s'Entrainer</em>, généralement 70%.
+								<img src="./img/train.gif" width="50%">
+							</li>
+							
+							<li class="fragment">Celles pour <em>Tester</em>, les 30% qui reste.
+								<img src="./img/test.gif" width="50%">
+							</li>
+							
+						</ol>
+					</section>
+
+					<section data-background="./img/mnist.png">
+						<h2>MNIST Data</h2>
+						<blockquote>
+							&ldquo;The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. 
+							The digits have been size-normalized and centered in a fixed-size image.&rdquo;</blockquote>
+						<code>http://yann.lecun.com/exdb/mnist/</code>
+					</section>
+
+					<section>
+						<h3>il faut toujours savoir le bon algorithme/données</h3>
+					</section>
+
+					<section>
+						<img src="./img/12.jpg" width="60%">
+					</section>
+					
+				</section>
+
+				<section data-background="./img/neural.png">
+					
+					<section>
+						<h1>ANN</h1>
+						<h5>Artificial Neuron Network</h5>
+					</section>
+
+					<section>
+						<img src="./img/cerveau.png" width="100%">
+					</section>
+
+					<section>
+						<h4>Exemple :<br> Faire un programme qui donne un taux de réussite selon le temps de sommeil VS études</h4>
+						<code>https://goo.gl/ETUKkB</code>
+					</section>
+
+					<section>
+						<img src="./img/step1.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step2.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step3.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step4.png" width="100%">
+					</section>
+
+					<section>
+						<h4 class="fragment">Deep Learning</h4>
+						<img src="./img/step5.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step6.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step7.png" width="100%">
+					</section>
+
+					<section>
+						<img src="./img/step8.png" width="100%">
+					</section>
+
+					<section>
+						<h3>Fonctions d'activation</h3>
+					</section>
+
+					<section>
+						<h3>Heaviside</h3>
+						<img src="./img/heaviside.png" width="80%">
+					</section>
+
+					<section>
+						<h3>sigmoid</h3>
+						<p>Utilisée en dehors des couches cachés</p>
+						<img src="./img/sigmoid.png" width="70%">
+					</section>
+
+					<section>
+						<h3>Rectified linear units (ReLU)</h3>
+						<p>Utilisée dans les couches cachés</p>
+						<img src="./img/relu.png" width="70%">
+					</section>
+
+					<section>
+						<img src="./img/step9.png" width="100%">
+					</section>
+
+					<section>
+						<code>On utilise des itérations pour laisser le programme avoir le bon <em>W</em></code>
+						<img src="./img/step10.png" width="100%">
+					</section>
+
+					<section>
+						<p>L'optimisation lors des itérations consiste à trouver la valeur minimale</p>
+						<img src="./img/minima.jpg" width="70%">
+					</section>
+
+					<section>
+						<h1>Gradient Descent</h1>
+						<p>Trouver le plus court chemin pour déscendre au plus bas coin d'une montagne</p>
+					</section>
+
+					<section>
+						<img src="./img/coursera1dotcom.png" alt="">
+						<code>https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent</code>
+					</section>
+
+					<section>
+						<img src="./img/coursera2dotcom.png" alt="">
+						<code>https://www.coursera.org/learn/machine-learning/lecture/8SpIM/gradient-descent</code>
+					</section>
+
+				</section>
+
+				<section data-background="./img/reality.png">
+					<section>
+						<h1>Exemples réels</h1>
+					</section>
+					<section>
+						<img src="./img/1.png">
+					</section>
+					<section>
+						<img src="./img/2.png">
+					</section>
+					<section>
+						<img src="./img/3.png">
+					</section>
+					<section>
+						<img src="./img/4.png">
+					</section>
+					<section>
+						<img src="./img/5.png">
+					</section>
+					<section>
+						<img src="./img/6.png">
+					</section>
+					<section>
+						<img src="./img/s1.jpg" width="40%">
+					</section>
+					<section>
+						<img src="./img/s2.jpg" width="40%">
+					</section>
+					<section>
+						<img src="./img/s3.jpg" width="40%">
+					</section>
+					<section>
+						<img src="./img/s4.jpg" width="40%">
+					</section>
+				</section>
+
+				<section data-background="./img/tools.png">
+					<section>
+						<h1>Les outils</h1>
+					</section>
+
+					<section data-background="./img/toools.png">
+
+						<ul>
+							<li class=fragment>Matlab</li>
+							<li class=fragment>R</li>
+							<li class=fragment>Lua
+								<ul>
+									<li class=fragment>Torch</li>
+								</ul>
+							</li>
+							<li class=fragment>
+								JAVA
+								<ul>
+									<li class=fragment>WEKA</li>
+									<li class=fragment>DL4J</li>
+								</ul>
+							</li>
+							<li class=fragment>
+								Python
+								<ul>
+									<li class=fragment>Theano</li>
+									<li class=fragment>Scikit-learn</li>
+									<li class=fragment>TensorFlow</li>
+								</ul>
+							</li>
+						</ul>
+
+					</section>
+
+				</section>
+
+				<section data-background="./img/tensorflow.png">
+
+					<section>
+						<ul style="color: black">
+						<li class=fragment>Google</li>
+						<li class=fragment>Open Source en 2015 <code>https://github.com/tensorflow/tensorflow</code></li>
+						<li class=fragment>Python, C++, Cuda
+							<ul>
+								<li class=fragment>Autres API :  Haskell, Java, Go, Rust, R , Scala.</li>
+							</ul>
+						</li>
+						<li class=fragment>
+							Linux, macOS, Windows, Android
+							<ul>
+								<li class=fragment>TensorFlow Lite à partir de Android O</li>
+							</ul>
+						</li>
+						<li class=fragment>Utilise Cuda (GPU) pour accélérer le temps de calcul</li>
+						<li class=fragment>Utilise Tensor Processing Unit (TPU) si vous voulez utiliser la force du Cloud (Google Compute Engine)</li>
+						<li class=fragment>TensorBoard</li>
+						</ul>
+					</section>
+
+					<section>
+						<video src="./img/banana.WEBM" controls width=800px></video>
+						<code style="color: black">https://youtu.be/oB-NnVpvQ78</code>
+					</section>
+
+					<section style="color: black">
+						<p class="fragment" style="font-size: .7em"><code>http://machinelearningmastery.com/start-here/</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://github.com/ZuzooVn/machine-learning-for-software-engineers</code></p>
+						<p class="fragment" style="font-size: .7em"><code>http://developercoding.com/tensorflow/</code></p>
+						<p class="fragment" style="font-size: .7em"><code>http://learningtensorflow.com/getting_started/</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://github.com/nlintz/TensorFlow-Tutorials</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://github.com/aymericdamien/TensorFlow-Examples</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://stackoverflow.com</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://stats.stackexchange.com/</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://www.youtube.com</code></p>
+						<p class="fragment" style="font-size: .7em"><code>https://www.google.com</code></p>
+					</section>
+
+					<section data-background="./img/dirty.jpg">
+						<h1 style="color: black">DÉMO</h1>
+					</section>
+
+				</section>
+
+				
+
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
